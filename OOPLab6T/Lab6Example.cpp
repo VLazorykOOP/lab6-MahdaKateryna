@@ -2,6 +2,7 @@
 #include <iostream>
 
 #include "task2.h"
+#include "task3.h"
 
 void menutask2()
 {
@@ -20,11 +21,23 @@ void menutask2()
 
 }
 
+void menutask3()
+{
+	ReadWritableFile file("Example File", "example.txt");
+	file.displayInfo();
+	cout << endl;
+	cout << file << endl;
+	cin >> file;
+	cout << endl;
+	file.displayInfo();
+	cin.get();
+}
+
 void MenuExample() {
 	std::cout << "     Menu Example   \n";
 	std::cout << "    1   Example 1  \n";
 	std::cout << "    2   Task 2  \n";
-	std::cout << "    3   Example 3  \n";
+	std::cout << "    3   Task 3  \n";
 
 	std::cout << "    4 or e  Exit \n";
 
@@ -44,7 +57,7 @@ void Example()
 		switch (ch) {
 		case '1':  SpaceExample1::mainExample1();   break;
 		case '2':  menutask2();   break;
-		case '3':  SpaceExample3::mainExample3();   break;
+		case '3':  menutask3();   break;
 		case '4':  return;
 		case 'e':  return;
 		}
