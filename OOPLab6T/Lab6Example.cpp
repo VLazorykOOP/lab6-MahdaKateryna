@@ -1,8 +1,30 @@
 ﻿#include "Lab6Example.h"
 #include <iostream>
 
+#include "task1.h"
 #include "task2.h"
 #include "task3.h"
+using namespace Task1;
+
+void menutask1()
+{
+	std::cout << " Task1\n";
+
+	std::cout << "Size for Base1: " << sizeof(Base1) << std::endl;
+	std::cout << "Size for Base2: " << sizeof(Base2) << std::endl;
+	std::cout << "Size for D1: " << sizeof(D1) << std::endl;
+	std::cout << "Size for D2: " << sizeof(D2) << std::endl;
+	std::cout << "Size for D3: " << sizeof(D3) << std::endl;
+	std::cout << "Size for D123: " << sizeof(D123) << std::endl << std::endl;
+
+	std::cout << "Size for Base1V: " << sizeof(Base1V) << std::endl;
+	std::cout << "Size for Base2V: " << sizeof(Base2V) << std::endl;
+	std::cout << "Size for D1V: " << sizeof(D1V) << std::endl;
+	std::cout << "Size for D2V: " << sizeof(D2V) << std::endl;
+	std::cout << "Size for D3V: " << sizeof(D3V) << std::endl;
+	std::cout << "Size for D123V: " << sizeof(D123V) << std::endl;
+
+}
 
 void menutask2()
 {
@@ -55,7 +77,7 @@ void Example()
 		std::cin.get();
 
 		switch (ch) {
-		case '1':  SpaceExample1::mainExample1();   break;
+		case '1':  menutask1();   break;
 		case '2':  menutask2();   break;
 		case '3':  menutask3();   break;
 		case '4':  return;
